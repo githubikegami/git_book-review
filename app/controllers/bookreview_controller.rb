@@ -1,7 +1,7 @@
 class BookreviewController < ApplicationController
 
     def index
-        @bookreviews = Bookreview.order("created_at DESC").page(prmas[:page]).per(12)
+        @bookreviews = Bookreview.order("created_at DESC").page(params[:page]).per(12)
     end
     
     def show

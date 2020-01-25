@@ -1,5 +1,7 @@
-<% @bookreviews.each do |bookreview| %>
-<%=bookreview.image%>
-<%=bookreview.publisher%>
-<%=bookreview.name%>
-<%=paginate(@bookreviews)%>
+  <% @bookreviews.each do |bookreviews| %>
+    <%= bookreviews.name %>
+    <%= bookreviews.description %>
+    <%= bookreviews.price %>
+    <%= bookreviews.publisher %>
+  <% end %>
+  <%= paginate(@bookreviews) %>
