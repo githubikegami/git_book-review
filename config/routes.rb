@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    root  'list#index'
     resources :bookreview do
         resources :comments, only: [:create]
     end
