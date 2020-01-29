@@ -1,9 +1,5 @@
 
-  <% @bookreviews.each do |bookreviews| %>
-    <%= link_to 'bookreviews.image', "/bookreview/#{bookreview.id}", method: :get %>
-    <%= link_to 'bookreviews.name', "/bookreview/#{bookreview.id}", method: :get %>
-    <%= bookreviews.description %>
-    <%= bookreviews.price %>
-    <%= bookreviews.publisher %>
+  <% @bookreviews.each do |bookreview| %>
+    <%= render partial: "bookreview", locals: { bookreview: bookreview } %>
   <% end %>
   <%= paginate(@bookreviews) %>
