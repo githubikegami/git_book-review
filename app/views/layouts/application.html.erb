@@ -2,26 +2,34 @@
 <html>
   <head>
     <title>BookReview</title>
-    
+    <link rel="stylesheet" href="normalize.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
 
   <body>
-      <header class="header">
-        <h1 class="title"><a href="/">BookReview</a></h1>
-        <% if user_signed_in? %>
-            <%= current_user.nickname %>
-            <a href="/users/">ユーザー一覧</a>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        <% else %>
-            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-            <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-        <% end %>
+    <header>
+          <div class="user_nav">
+            <div class="root"><a href="/">BookReview</a>
+              <a href="/">書籍一覧</a>
+              <a href="/">書籍検索</a>
+            </div>
+            <% if user_signed_in? %>
+              <%= current_user.nickname %>
+              <ul>
+                <li><a href="/users/">ユーザー一覧</a></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            <% else %>
+              <ul>
+                <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+                <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+              </ul>
+            <% end %>
+          </div>
     </header>
     
     <%= yield %>

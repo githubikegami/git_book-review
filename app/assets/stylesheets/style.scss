@@ -1,72 +1,136 @@
+
+* {
+  margin:0;
+  padding:0;
+}
+
+// application
+
+html{
+//   background-color: pink;
+// background-color: black;
+
+}
+
+body{
+// background-color: blue;
+}
+
 header {
-  font-family:游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
-  cursor: pointer;
+      font-family:游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
+      cursor: pointer;
 }
 
 .user_nav {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
     width: 100%;
     height: 82px;
-    background-color: #FFFFFF;
-    border: 1px solid #cccccc; /* Gray */
+    background-color: black;
+    opacity: 0.9;
+    font-size: 20px;
+    line-height: 75px;
 }
 
-.brand-logo{
-  font-size: 40px;
-  position: absolute;
-  top: 20px;
-  left: 136px;
-  font-family: "Cormorant Infant", "游明朝体", "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
+.root a{
+      color: white;
 }
 
-.nav-mobile{
-  display: inline;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 100px;
+ul{
+    display: flex;
+    justify-content: space-evenly;
 }
 
-li {
-    margin-right: 40px;
+ul li a{
+    line-height: 75px;
+    color: white;
     list-style: none;
-    margin-top: 15px;
 }
 
-.rogintext{
-  color: white;
-  background-color: #000000;
+footer{
+      background-color: black;
+      color: white;
+      opacity: 0.9;
+      text-align: center;
+      height: 82px;
+      line-height: 80px;
+}
+// list/index.html.erb
+
+.main{
+    background-image: url(ELL75_yousyohondana20120620.jpg);
+    font-family:游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white; 
+}
+
+.main-content{
   text-align: center;
-  border-radius: 16px;
-  width: 80px;
-  height: 32px;
-  padding: 9px;
+  padding-top: 300px;
+  display: block;
 }
 
-a {
+.main a{
+    color: white; 
+    text-decoration: none;
+}
+
+// .main h1{
+//   text-align: center;
+//   padding-top: 300px;
+// }
+
+// .main p{
+//   text-align: center;
+// }
+
+// .main a{
+//   display: block;
+//   text-align: center;
+// }
+
+// index.html.erb
+
+// .contents.row{
+//   width: 320px;
+//   height: 273px;
+//   margin: 0 auto;
+//   text-align:center;
+//   font-family: 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
+// }
+
+// devise/registrations/new.html.erb
+// devise/sessions/new.html.erb
+
+form{
+    height: 65vh;
+    padding-top: 200px;
+    background-color: #ffffff;
+}
+
+form h2{
+     text-align: center;
+     padding-bottom: 20px;
+}
+
+header a {
   text-decoration: none;
   color: #000000;
 }
 
-a:hover {
+header a:hover {
   color: red;
 }
 
-.contents.row{
-  width: 320px;
-  height: 273px;
-  margin: 0 auto;
-  text-align:center;
-  font-family: 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
-}
-
-.title{
-  font-size: 28px;
-  letter-spacing: .2em;
-  margin-top: 147px;
-}
-
 .field {
- text-align:center;
- width: 320px;
+     text-align: center;
+     width: 320px;
+     margin: 0 auto;
 }
 
 input[type="email"] {
@@ -83,14 +147,14 @@ input[type="email"] {
         font-size: 0.9em;
 }
 
-input[type="email"]:before{
-  opacity: 1;
-  background-color: #6098FF;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  transition: -webkit-transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
-  transition: transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity
-}
+// input[type="email"]:before{
+//   opacity: 1;
+//   background-color: #6098FF;
+//   -webkit-transform: scaleX(1);
+//   transform: scaleX(1);
+//   transition: -webkit-transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity .4s;
+//   transition: transform .6s cubic-bezier(.08, .35, .13, 1.02), opacity
+// }
 
 input[type="password"] {
         box-sizing: border-box;
@@ -117,9 +181,21 @@ input[type="submit"] {
         letter-spacing: .2em;
         font-size: 18px;
         cursor: pointer;
+        margin: 0 auto;
 }
 
 input[type="submit"]:hover {
         background-color: #6C1B00;
         border: 1px solid #6C1B00;
 }
+
+.aid{
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+
+
