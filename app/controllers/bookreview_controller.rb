@@ -6,7 +6,12 @@ class BookreviewController < ApplicationController
     
     def show
         @bookreviews = Bookreview.find(params[:id])
-        @comments = @bookreviews.comments.includes(:user)
+        @comments = Comment.new
+        @remarks = @bookreviews.comments.includes(:user)
+    end
+    
+    def search
+        @bookreviews = Bookreview.where('title LIKE(?)', "%#{params[:keyword]}%")
     end
 
 end

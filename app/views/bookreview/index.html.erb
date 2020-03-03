@@ -1,6 +1,9 @@
-<div class="contents row">
-  <% @bookreviews.each do |bookreview| %>
+<div class="container">
+    <h2>書籍一覧</h2>
+  <div class="row">
+    <% @bookreviews.each do |bookreview| %>
     <%= render partial: "bookreview", locals: { bookreview: bookreview } %>
-  <% end %>
-  <%= paginate(@bookreviews) %>
+    <% end %>
+    <%= paginate(@bookreviews) %>
+  </div>
 </div>

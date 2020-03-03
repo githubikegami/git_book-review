@@ -13,28 +13,58 @@ html{
 }
 
 body{
+    font-family: 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
 // background-color: blue;
 }
 
 header {
-      font-family:游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
+        display: flex;
       cursor: pointer;
 }
 
+.button-search {
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 8pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #ffffff;     /* 背景色     */
+  color         : #000000;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 1;           /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 1px 1px 3px #666666;  /* 影の設定 */
+}
+.button-search:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  opacity       : 0.9;         /* カーソル時透明度 */
+}
+
 .user_nav {
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
     width: 100%;
-    height: 82px;
+    height: 55px;
     background-color: black;
     opacity: 0.9;
     font-size: 20px;
-    line-height: 75px;
+    line-height: 55px;
+}
+
+form.search_form{
 }
 
 .root a{
       color: white;
+      padding-left: 70px;
+}
+
+.root{
 }
 
 ul{
@@ -43,9 +73,10 @@ ul{
 }
 
 ul li a{
-    line-height: 75px;
+    line-height: 55px;
     color: white;
     list-style: none;
+    padding-left: 70px;
 }
 
 footer{
@@ -53,14 +84,13 @@ footer{
       color: white;
       opacity: 0.9;
       text-align: center;
-      height: 82px;
-      line-height: 80px;
+      height: 55px;
+      line-height: 55px;
 }
 // list/index.html.erb
 
 .main{
     background-image: url(ELL75_yousyohondana20120620.jpg);
-    font-family:游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -94,29 +124,10 @@ footer{
 //   text-align: center;
 // }
 
-// index.html.erb
 
-// .contents.row{
-//   width: 320px;
-//   height: 273px;
-//   margin: 0 auto;
-//   text-align:center;
-//   font-family: 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
-// }
 
 // devise/registrations/new.html.erb
 // devise/sessions/new.html.erb
-
-form{
-    height: 65vh;
-    padding-top: 200px;
-    background-color: #ffffff;
-}
-
-form h2{
-     text-align: center;
-     padding-bottom: 20px;
-}
 
 header a {
   text-decoration: none;
@@ -127,11 +138,37 @@ header a:hover {
   color: red;
 }
 
-.field {
+.field1 {
+     text-align: center;
+     width: 320px;
+     margin: 0 auto;
+    padding-top: 200px;
+}
+
+.field2 {
      text-align: center;
      width: 320px;
      margin: 0 auto;
 }
+
+.field3 {
+     text-align: center;
+     width: 320px;
+     margin: 0 auto;
+}
+
+.actions {
+     text-align: center;
+     width: 320px;
+     margin: 0 auto;
+     padding-bottom: 135px;
+}
+
+.aid{
+    text-align: center;
+    padding-top: 50px;
+}
+
 
 input[type="email"] {
         box-sizing: border-box;
@@ -140,7 +177,6 @@ input[type="email"] {
         border: 1px solid rgba(255,255,255,0.8);
         border-bottom: solid 1px #D2D5D9;
         outline: none;
-        font-family: 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
         background-color: #E8F0FE;
         margin-top: 13px;
         margin-bottom: 40px;
@@ -163,7 +199,6 @@ input[type="password"] {
         border: 1px solid rgba(255,255,255,0.8);
         border-bottom: solid 1px #D2D5D9;
         outline: none;
-        font-family: 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
         background-color: #E8F0FE;
         margin-bottom: 38px;
         font-size: 0.9em;
@@ -174,7 +209,6 @@ input[type="submit"] {
         border: 1px solid rgb(0,0,0);
         width: 320px;
         height: 40px;
-        font-family:"Cormorant Infant", 游明朝体, "Yu Mincho", YuMincho, "Sawarabi Mincho", serif;
         display: block;
         background: rgb(0,0,0);
         color: white;
@@ -189,12 +223,130 @@ input[type="submit"]:hover {
         border: 1px solid #6C1B00;
 }
 
-.aid{
+// index.html.erb
+
+.container h2{
     text-align: center;
-    padding-top: 50px;
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 
+.row{
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
+//   text-align:center;
+  padding:  10px;             /* 余白指定 */
+  display: flex;
+  align-items:flex-start; 
+  justify-content:space-around;
+  flex-direction:row-reverse;
+  flex-wrap:wrap;
+  align-content:stretch;
+}
 
+.container{
+    // padding-top:200px;
+    width: 100%;
+    height: 100%;
+    // background-color: #f5f5f5;     /*_bookreview 背景色指定 */
+}
+// _bookreview
+
+.box_wrapper{
+    width: 262px;
+    height: 493px;
+    border: solid;
+    border-width: thin;
+    border-color: #e7e7e7;
+    margin-bottom: 22px;
+    border-radius: 4px;
+}
+
+.box{
+    font-size: 14px;
+    width: 262px;
+    height: 473px;
+}
+
+.box_image_frame{
+    width: 260px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.box_image {
+    width: 200px;
+    height: 230px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.box_title_frame{
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #e7e7e7;
+    border-width: thin;
+    width: 260px;
+    height: 170px;
+}
+
+.box_title{
+    padding-top: 20px;
+    margin-left: 20px;
+    width: 230px;
+    height: 20px;
+}
+
+.assess{
+    margin: 80px;
+    width: 230px;
+    height: 20px;    
+}
+
+.favorite{
+    width: 230px;
+    height: 20px;    
+    padding-bottom: 20px;
+}
+
+// show.html.erb
+
+.books_details{
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+}
+
+.books_details_sentence h2{
+    margin-top: 145px;
+    text-align: center;
+}
+
+.show{
+  display: flex;
+  padding: 100px;
+}
+
+.show_image{
+}
+
+.show_sentence tr{
+    flex-direction:column;
+    list-style: none;
+    margin: 0;
+	padding: 0;
+}
+
+.show_sentence tr td{
+	padding: 10px 20px;
+	text-align: left;
+}
+
+.til{
+    width: 200px;
+    height: 230px;
+}
 
 
 
