@@ -1,0 +1,14 @@
+
+          <%# question.user_answer(@user.id).text %>
+        <!--<small class='edit'>-->
+          <%# link_to '編集', edit_answer_path(question.user_answer(@user.id)) %>
+        <!--</small>-->
+            <div style="user_render">
+              <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);"></div>
+                    <div class="title"><%= comment.bookreview.title %></div>
+                    <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
+                    <div class="updated_day"><time><%= time_ago_in_words comment.bookreview.updated_at %></time></div>
+                          
+
+                  <div class="user_review"><%= comment.text %></div>
+            </div>

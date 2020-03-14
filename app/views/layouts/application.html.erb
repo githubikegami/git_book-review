@@ -13,23 +13,24 @@
   <body>
     <header>
       <div class="user_nav">
-          <div class="root"><a href="/">BookReview</a>
-            <a href="/bookreview">書籍一覧</a>
-          </div>
+        <ul class="foo">
+              <li><a href="/">BookReview</a></li>
+              <li><a href="/bookreview">書籍一覧</a></li>
+              <li><a href="/ranking">ランキング</a></li>
             <% if user_signed_in? %>
-              <ul>
-                <li><a href="/users/">ユーザー一覧</a></li>
+                <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
                 <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-              </ul>
             <% else %>
-              <ul>
                 <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
                 <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
-              </ul>
             <% end %>
+            
             <%= form_tag('/bookreview/search', method: :get,class: "search_form") do %>
-              <input class="input_search" name="keyword" placeholder="書籍のタイトルを入力" type="text"><button class="button-search" title="検索" type="submit" value="検索">検索</button></input>
+              <input class="input_search" name="keyword" placeholder="書籍のタイトルを入力" type="text">
+              <button class="button-search" title="検索" type="submit" value="Search"><span class="button-search2">Search</span></div></input>
             <% end %>
+        </ul>
+
                <!--<form accept-charset="utf-8" action="/" class="js-search-submit" method="get">-->
                <!--</form>-->
       </div>

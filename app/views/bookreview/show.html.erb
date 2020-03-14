@@ -4,7 +4,7 @@
   </div>
 
   <div class="show">
-    <div class="show_image"><%= image_tag @bookreviews.image_url,:size =>'180x250'%>
+    <div class="bookreview_show_image"><%= image_tag @bookreviews.image_url,:size =>'180x250'%>
     </div>
     <div class="show_sentence">
 <table>
@@ -63,6 +63,7 @@
         <% @remarks.each do |remark| %>
           <p>
             <strong><%= link_to remark.user.nickname, "/users/#{remark.user_id}" %>：</strong>
+            <span class="rating-star"><i class="star-actived rate-<%= remark.rate %>0"></i></span>
             <%= remark.text %>
           </p>
         <% end %>

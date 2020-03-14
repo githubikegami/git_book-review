@@ -7,6 +7,7 @@ Rails.application.routes.draw do
               get 'search'
             end
     end
+    resources :ranking, only: [:index]
     resources :list, only: [:index]
-    resources :users, only: [:index, :show]
+    resources :users, only: [:show]
 end
