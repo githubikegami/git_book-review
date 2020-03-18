@@ -1,0 +1,10 @@
+
+    <%= form_for @comment,:url => {:action => :update} do |f| %>
+      <div class="form-group">
+        <%= f.text_area :text, placeholder: "入力してください", cols:"30", rows:"10", autofocus:"true", class:"form-control"%>
+        <div class="col-lg-6">
+          <%= f.label :rate, "rate：" %>
+          <%= f.text_field :rate, placeholder: "rate", class: "form-control" %>
+      </div>
+      <%= f.submit "編集OK", class:"btn btn-primary withripple"%>
+    <% end %>

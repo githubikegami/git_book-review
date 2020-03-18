@@ -64,6 +64,7 @@
           <p>
             <strong><%= link_to remark.user.nickname, "/users/#{remark.user_id}" %>：</strong>
             <span class="rating-star"><i class="star-actived rate-<%= remark.rate %>0"></i></span>
+            <p><%= remark.created_at.to_s(:datetime) %></p>                          
             <%= remark.text %>
           </p>
         <% end %>

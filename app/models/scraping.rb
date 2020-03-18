@@ -5,7 +5,7 @@ class Scraping
     links2 = []
     abc = []
     agent = Mechanize.new
-    current_page = agent.get("https://books.rakuten.co.jp/search?sitem=html&g=001&l-id=pc-search-box&x=0&y=0")
+    current_page = agent.get("https://books.rakuten.co.jp/search?sitem=ruby&g=001&l-id=pc-search-box&x=0&y=0")
     current_page.search('p.gbs').remove
     current_page.search('.btn-preview').remove
     current_page.search('a.ui-carousel-media-image isLoaded').remove
