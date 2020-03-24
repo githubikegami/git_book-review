@@ -197,3 +197,32 @@ ja:
       long: ! '%Y年%m月%d日(%a) %H時%M分%S秒 %z'
       short: ! '%y/%m/%d %H:%M'
     pm: 午後
+    
+# ページネーション 
+    
+  #   ja:
+  # views:
+  #   pagination:
+  #     first: <span class="fas fa-angle-double-left">&laquo; 最初</span>
+  #     last: <span class="fas fa-angle-double-right">最後 &raquo;</span>
+  #     previous: <span class="fas fa-angle-left">&lsaquo; 前</span>
+  #     next: <span class="fas fa-angle-right">次 &rsaquo;</span>
+  #     truncate: "..."
+      
+  #     ja:
+  # views:
+  #   pagination:
+  #     first: <i class="fas fa-angle-double-left"></i>
+  #     last: <i class="fas fa-angle-double-right"></i>
+  #     previous: <i class="fas fa-angle-left"></i>
+  #     next: <i class="fas fa-angle-right"></i>
+  #     truncate: "..."
+  
+ja:
+  views:
+    pagination:
+      first: 先頭
+      last: 最終
+      previous: 前ページ
+      next: 次ページ
+      truncate: "..."
