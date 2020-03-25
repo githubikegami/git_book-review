@@ -5,7 +5,7 @@
     <%= render partial: "bookreview", locals: { bookreview: bookreview } %>
     <% end %>
   </div>
-        <div class="example2">
-          <%= paginate(@bookreviews) %>
-        </div>
+  <div class="paginate-wrapper">
+  <%= paginate(@bookreviews) %>
+  </div>
 </div>
