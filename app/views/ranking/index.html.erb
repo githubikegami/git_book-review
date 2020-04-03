@@ -1,8 +1,8 @@
 <div class="container">
-    <h2>書籍の評価ランキング</h2>
+    <h3>書籍レビュー数</h3>
   <div class="row">
-    <% @rankings.each do |bookreview| %>
-    <%= render partial: "ranking", locals: { bookreview: bookreview } %>
+    <% @rankings.each.with_index(1) do |bookreview, i| %>
+    <%= render partial: "ranking", locals: { bookreview: bookreview, i: i } %>
     <% end %>
     <!--paginate-->
   </div>

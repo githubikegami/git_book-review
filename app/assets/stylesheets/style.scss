@@ -32,7 +32,6 @@ header {
     position: fixed;
     width: 100%;
     background-color: black;
-    opacity: 0.9;
     font-size: 20px;
     line-height: 55px;
 }
@@ -205,6 +204,12 @@ footer small{
 // devise/registrations/new.html.erb
 // devise/sessions/new.html.erb
 
+
+
+.title {
+    text-align: center;
+}
+
 header a {
   text-decoration: none;
   color: #000000;
@@ -214,6 +219,12 @@ header a:hover {
 //   color: #FF5F17;
 //   color: #FF4F02;
 color: #FF4500;
+}
+
+.login h2{
+    text-align: center;
+    transform: translate(0%, 640%);
+    letter-spacing: 0.11em
 }
 
 .field1 {
@@ -243,8 +254,33 @@ color: #FF4500;
 }
 
 .aid{
-    text-align: center;
-    padding-top: 50px;
+  justify-content: center;
+  display: flex;
+}
+
+.aid a{
+color: #999c9f;
+    //   text-align: center;
+margin: 0px 15px 0px 10px;
+  text-decoration: none;
+//   transform: translate(40%, -472%);
+//   margin: 0px 10px;
+//   text-align: center;
+// margin: 0 auto;
+//   position: absolute;
+//   top: 700;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   margin: auto;
+//   width: 80%;
+//   height: 3.2rem;
+    transform: translateY(-570%) translateX(15%);
+  
+}
+
+.aid a:hover{
+   color: black; 
 }
 
 
@@ -276,6 +312,7 @@ input[type="password"] {
         height: 30px;
         border: 1px solid rgba(255,255,255,0.8);
         border-bottom: solid 1px #D2D5D9;
+        
         outline: none;
         background-color: #E8F0FE;
         margin-bottom: 38px;
@@ -322,7 +359,7 @@ input[type="submit"]:hover {
   display: flex;
   align-items:flex-start; 
   justify-content:space-around;
-  flex-direction:row-reverse;
+  flex-direction:row;
   flex-wrap:wrap;
   align-content:stretch;
 }
@@ -794,6 +831,8 @@ span.btn-schedule.is-unsold-3 .icon-unsold:before {
 
 
 nav.pagination{
+    width: 470px;
+        font-size: 16px;
     display: inline-block;
     // padding: 0;
     // margin: 0;
@@ -821,7 +860,7 @@ display: inline;
 }
 
 .first a{
-    margin: 0px 6px;
+    margin: 0px -5px;
     // border: 1px solid #ddd; /* Gray */
     color: black;
     padding: 8px 16px;
@@ -839,11 +878,14 @@ display: inline;
 }
 
 .page gap{
+    width: 16px;
+height: 16px;
+
 display: inline;
 }
 
 .page gap a{
-    margin: 0px -3px;
+    margin: 0px -7px;
     // border: 1px solid #ddd; /* Gray */
     color: black;
     padding: 8px 16px;
@@ -865,7 +907,7 @@ display: inline;
 }
 
 .last a{
-        margin: 0px -3px;
+        margin: 0px -2px;
     // border: 1px solid #ddd; /* Gray */
     color: black;
     padding: 8px 16px;
@@ -887,7 +929,7 @@ display: inline;
 }
 
 .next a{
-        margin: 0px -3px;
+    margin: 0px -3px;
     // border: 1px solid #ddd; /* Gray */
     color: black;
     padding: 8px 16px;
@@ -909,7 +951,7 @@ display: inline;
 }
 
 .page a{
-        margin: 0px -7px;
+        margin: 0px -6px;
 
     // border: 1px solid #ddd; /* Gray */
     color: black;
@@ -932,7 +974,7 @@ display: inline;
 }
 
 .prev a{
-        margin: 0px 0px;
+    margin: 0px 0px;
     // border: 1px solid #ddd; /* Gray */
     color: black;
     padding: 8px 16px;
@@ -948,6 +990,20 @@ display: inline;
     color: white;
     border: 1px solid #4CAF50;
 }
+
+span.page.current {
+    background-color: #e7e7e7;
+    color: black;
+    padding: 8px 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    // margin: 7px;
+}
+
 
 
 // nav.pagination.first a.active:hover:not(.active) {background-color: black;}
@@ -1012,3 +1068,39 @@ display: inline;
 // ul.pagination li a {
 //     font-size: 22px;
 // }
+
+// views/ranking/_ranking.html.erb
+
+.box_wrapper_ranking{
+    width: 261px;
+    height: 441px;
+    border: solid;
+    border-width: thin;
+    border-color: #e7e7e7;
+    margin-bottom: 52px;
+    border-radius: 4px;
+}
+
+p.rank-label{
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    letter-spacing: 7px;
+    line-height: 35px;
+    height: 35px;
+    // text-align: center;
+    // margin-left: 10px; 
+    margin-top: 30px; 
+    width: 260px;
+    // border: 1px solid #ddd; /* Gray */
+    // background-color: #ddd;
+    // color: white;
+    // padding-right: 20px;
+    // padding-left: 20px;
+    text-align: center;
+    // border-right: 1px solid #e7e7e7; /* Gray */
+    // border-left: 1px solid #e7e7e7; /* Gray */
+    border-top: 1px solid #e7e7e7; /* Gray */
+    border-bottom: 1px solid #e7e7e7; /* Gray */
+    // background-color: #ddd;
+    // color: white;
+}

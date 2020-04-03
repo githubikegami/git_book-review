@@ -4,7 +4,7 @@
 
                 <h2 class="text-middle">
                     検索結果
-                </h>
+                </h2>
                 <% @bookreviews.each do |bookreview| %>
                     <a class="lis" href="/bookreview/<%= bookreview.id %>" title="<%= bookreview.title %>">
                           <div class="til" style="background-image: url(<%= bookreview.image_url %>);" title="<%= bookreview.title %>">
@@ -13,3 +13,5 @@
                           <%= bookreview.title %>
                           <%= bookreview.description %>
                 <% end %>
+                
+                
