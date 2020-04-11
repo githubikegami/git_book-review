@@ -1,17 +1,13 @@
 
               <!--<form accept-charset="utf-8" action="/" class="js-search-submit" method="get">-->
               <!--</form>-->
-
-                <h2 class="text-middle">
-                    検索結果
-                </h2>
-                <% @bookreviews.each do |bookreview| %>
-                    <a class="lis" href="/bookreview/<%= bookreview.id %>" title="<%= bookreview.title %>">
-                          <div class="til" style="background-image: url(<%= bookreview.image_url %>);" title="<%= bookreview.title %>">
-                          </div>
-                    </a>
-                          <%= bookreview.title %>
-                          <%= bookreview.description %>
-                <% end %>
+<div class="container">
+    <h3>検索結果</h3>
+  <div class="row">
+    <% @bookreviews.each do |bookreview| %>
+    <%= render partial: "bookreview", locals: { bookreview: bookreview } %>
+    <% end %>
+  </div>
+</div>
                 
                 

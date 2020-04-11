@@ -5,6 +5,8 @@
         <!--</small>-->
             <div style="user_render">
               <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);"></div>
+              
+              
                     <div class="title"><%= comment.bookreview.title %></div>
                     <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
                     <p><%= comment.created_at.to_s(:datetime) %></p>                          

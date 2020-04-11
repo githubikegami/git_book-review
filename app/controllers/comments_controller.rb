@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     if comment.user_id == current_user.id
       comment.destroy
     end
+    redirect_to "/users/#{current_user.id}"
   end
 
   def edit
@@ -20,6 +21,7 @@ class CommentsController < ApplicationController
     if comment.user_id == current_user.id
     comment.update(update_params)
     end
+    redirect_to "/users/#{current_user.id}"
   end
   
   private
